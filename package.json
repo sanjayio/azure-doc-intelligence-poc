@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "compile": "tsc",
+    "ple": "node dist/runners/prebuilt_layout_runner.js",
+    "dev-ple": "pnpm run compile && pnpm run ple"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.4",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@azure/ai-form-recognizer": "^5.0.0",
+    "@azure/identity": "^4.5.0",
+    "dotenv": "^16.4.5"
+  }
+}
