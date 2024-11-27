@@ -2,7 +2,9 @@
   "scripts": {
     "compile": "tsc",
     "ple": "node dist/runners/prebuilt_layout_runner.js",
-    "dev-ple": "pnpm run compile && pnpm run ple"
+    "pde": "node dist/runners/prebuilt_document_runner.js",
+    "dev-ple": "pnpm run compile && pnpm run ple",
+    "dev-pde": "pnpm run compile && pnpm run pde"
   },
   "devDependencies": {
     "@types/node": "^22.9.4",

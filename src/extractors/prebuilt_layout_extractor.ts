@@ -37,8 +37,19 @@ export async function prebuiltLayoutExtractor(filePath: string): Promise<Prebuil
 
   }
 
+  let tableContent = ""
+
+  if (tables && tables.length > 0) {
+    tables.map((table, index) => {
+      tableContent += `Table Number: ${index + 1} (${table.rowCount} x ${table.columnCount})\n`;
+      table.cells.map((cell) => {
+        tableContent += `(${cell.rowIndex}, ${cell.columnIndex}): ${cell.content}\n`;
+      })
+    })
+  }
+
   return {
     textContent: textContent,
-    tableContent: "",
+    tableContent: tableContent,
   };
 }
